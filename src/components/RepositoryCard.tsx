@@ -21,30 +21,35 @@ export const RepositoryCard: FC<Props> = props => {
   }
 
   return (
-    <Card>
-      <CardContent>
-        <Typography variant="h5">{props.repository.name}</Typography>
-        <Typography color="textSecondary">
-          {props.repository.description}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button
-          onClick={onDownloadButtonClicked}
-          variant="contained"
-          color="primary"
-          disableElevation
-          fullWidth
-        >
-          <CloudDownload />
-          ダウンロード
-        </Button>
-        <a
-          ref={downloadAnchorRef}
-          href={props.repository.repository + '/archive/master.zip'}
-          download={props.repository.download ?? props.repository.name + '.zip'}
-        ></a>
-      </CardActions>
-    </Card>
+    <div>
+      <Card className="repository">
+        <CardContent>
+          <Typography variant="h5">{props.repository.name}</Typography>
+          <Typography color="textSecondary">
+            {props.repository.description ??
+              props.repository.name + 'の内容です。'}
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button
+            onClick={onDownloadButtonClicked}
+            variant="contained"
+            color="primary"
+            disableElevation
+            fullWidth
+          >
+            <CloudDownload />
+            ダウンロード
+          </Button>
+          <a
+            ref={downloadAnchorRef}
+            href={props.repository.repository + '/archive/master.zip'}
+            download={
+              props.repository.download ?? props.repository.name + '.zip'
+            }
+          ></a>
+        </CardActions>
+      </Card>
+    </div>
   )
 }
