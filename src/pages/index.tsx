@@ -20,10 +20,10 @@ const Home = () => {
         />
       </Head>
 
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="md">
         <CssBaseline />
         <div className="paper">
-          <Typography component="h1" variant="h3">
+          <Typography component="h1" variant="h3" align="center">
             HackForSpring
           </Typography>
           <div className="repositories">
