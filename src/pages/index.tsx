@@ -37,16 +37,21 @@ const Home = () => {
         </div>
       </Container>
 
-      <style jsx>{`
+      <style jsx global>{`
         .paper {
           margin-top: 32px;
           display: 'flex';
           flex-direction: 'column';
           align-items: 'center';
         }
+
         .repositories {
           margin-top: 16px;
           width: '100%';
+        }
+
+        .repository {
+          margin-bottom: 16px;
         }
       `}</style>
     </div>
