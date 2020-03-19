@@ -3,6 +3,10 @@ import { Repository } from '../types/Repository'
 // 以下の配列にレッスンのデータを追加してください。
 export const Repositories: Repository[] = [
   {
+    name: '第11回',
+    repository: 'https://github.com/hackforspring/lesson-11'
+  },
+  {
     name: '第10回',
     repository: 'https://github.com/hackforspring/lesson-10'
   },
